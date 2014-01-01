@@ -1,8 +1,8 @@
 # Shareful.js
 
-When all you want is to share a text (copy to clipboard), and dont want to care about layout. 
+When all you want is to share a text (copy to clipboard), and dont want to care about flash dependencies or where in your layout to put a text box to hold the content.
 
-All you care about is that you need to give the user a popup with some text
+All you care about is that you need to give the user a super simple popup with some text
 
 ```javascript
 // just basic sharing
