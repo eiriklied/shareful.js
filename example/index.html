@@ -16,17 +16,19 @@
   <body>
 
     <div class="pure-g">
-      <div class="pure-u-1-2">
-        <div class="l-box">
-          <button id="basic" class="pure-button pure-button-primary">Share me something basic</button>
-        </div>
+      <div class="l-box">
+        <button id="basic" class="pure-button pure-button-primary">Share me something basic</button>
       </div>
     </div>
     <div class="pure-g">
-      <div class="pure-u-1-2">
-        <div class="l-box">
-          <button id="with-label" class="pure-button pure-button-primary">Share me something with more text</button>
-        </div>
+      <div class="l-box">
+        <button id="with-label" class="pure-button pure-button-primary">Share me something with more text</button>
+      </div>
+    </div>
+
+    <div class="pure-g">
+      <div class="l-box">
+        <button id="with-template" class="pure-button pure-button-primary">Share me something with a template</button>
       </div>
     </div>
 
@@ -38,7 +40,7 @@
             <label for="sf-text" id="sf-label"></label>
           </div>
           <div class="sf-text">
-            <textarea id="sf-text" type="text"></textarea>
+            <textarea id="sf-text"></textarea>
           </div>
         </div>
       </div>
@@ -55,7 +57,13 @@
 
       $('#with-label').click(function() {
         Shareful.share({
-          label: 'Copy this!',
+          label: 'Here you go!',
+          text: 'Shared ' + new Date(),
+        });
+      });
+
+      $('#with-template').click(function() {
+        Shareful.share({
           text: 'Shared ' + new Date(),
           template: $('.template').html()
         });

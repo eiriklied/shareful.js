@@ -5,6 +5,7 @@
     defaults: {
       text: null,
       label: null,
+      textarea: null,
       template: [
       '<div class="sf-box">',
       '  <div class="sf-header sf-row"><span class="sf-close">&times;</span></div>',
@@ -13,7 +14,7 @@
       '      <label for="sf-text" id="sf-label"></label>',
       '    </div>',
       '    <div class="sf-text">',
-      '      <textarea id="sf-text" type="text"></textarea>',
+      '      <input id="sf-text" type="text"/>',
       '    </div>',
       '  </div>',
       '</div>'].join('')
@@ -39,6 +40,7 @@
 
       // set label text
       opts.label ? $label.text(opts.label) : $label.hide();
+
       // set textbox text
       $textbox.val(opts.text);
       // set focus on textbox text
