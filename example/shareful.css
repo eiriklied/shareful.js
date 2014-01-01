@@ -1,5 +1,5 @@
 .sf-overlay {
-  position: absolute;
+  position: fixed;
   top:0; left:0; right:0; bottom:0;
   opacity: 0.8;
   background-color: #000;
@@ -7,10 +7,11 @@
 }
 .sf-box {
   display: none;
-  position: absolute;
+  position: fixed;
   z-index: 2001;
   left: 0;
   right: 0;
+  top: 100px;
   margin: 0 auto;
 
   background-color: #fff;
