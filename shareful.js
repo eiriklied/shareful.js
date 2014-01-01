@@ -4,15 +4,13 @@
   var Shareful = {
     defaults: {
       text: null,
-      label: null,
+      heading: null,
       textarea: null,
       template: [
       '<div class="sf-box">',
       '  <div class="sf-header sf-row">',
       '    <span class="sf-close">&times;</span>',
-      '    <div class="sf-label">',
-      '      <label for="sf-text" id="sf-label"></label>',
-      '    </div>',
+      '    <div class="sf-heading-text"></div>',
       '  </div>',
       '  <div class="sf-body sf-row">',
       '    <div class="sf-text">',
@@ -36,12 +34,12 @@
       
       var $overlay = $('<div class="sf-overlay"/>').appendTo('body');
       var $box     = $(opts.template).appendTo('body').addClass('sf-focused');
-      var $label   = $box.find('#sf-label');
+      var $heading = $box.find('.sf-heading-text');
       var $textbox = $box.find('#sf-text');
       var $close   = $box.find('.sf-close');
 
-      // set label text
-      opts.label ? $label.text(opts.label) : $label.hide();
+      // set heading text
+      opts.heading ? $heading.text(opts.heading) : $heading.hide();
 
       // set textbox text
       $textbox.val(opts.text);

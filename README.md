@@ -8,9 +8,9 @@ All you care about is that you need to give the user a super simple popup with s
 // just basic sharing
 Shareful.share('http://my.url/for-sharing');
 
-// with a label text
+// with a heading
 Shareful.share({ 
-  label: 'Here you go!',
+  heading: 'Here you go!',
   text: 'The text to share'
 });
 

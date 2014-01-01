@@ -28,7 +28,7 @@
 .sf-header {
   margin-bottom: 10px;
 }
-.sf-label {
+.sf-heading-text {
   margin: 5px 0 5px;
   font-size: 1.5em;
   font-weight: bold;
@@ -42,7 +42,9 @@
   padding: 8px 10px;
   border-radius: 3px;
 }
-
+.sf-text input[type=text]{
+  height: initial;
+}
 .sf-close {
   float:right;
   cursor: pointer;

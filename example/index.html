@@ -23,7 +23,7 @@
     </div>
     <div class="pure-g">
       <div class="l-box">
-        <button id="with-label" class="pure-button pure-button-primary">Share me something with more text</button>
+        <button id="with-heading" class="pure-button pure-button-primary">Share me something with more text</button>
       </div>
     </div>
 
@@ -40,9 +40,7 @@
           <div class="sf-text">
             <textarea id="sf-text"></textarea>
           </div>
-          <div class="sf-label">
-            <label for="sf-text" id="sf-label"></label>
-          </div>
+          <div class="sf-heading-text"></div>
         </div>
       </div>
     </div>
@@ -56,9 +54,9 @@
         Shareful.share('Shared ' + new Date());
       });
 
-      $('#with-label').click(function() {
+      $('#with-heading').click(function() {
         Shareful.share({
-          label: 'Here you go!',
+          heading: 'Here you go!',
           text: 'Shared ' + new Date(),
         });
       });
@@ -66,7 +64,7 @@
       $('#with-template').click(function() {
         Shareful.share({
           text: 'Shared ' + new Date(),
-          label: 'Look! Label underneath a textarea',
+          heading: 'Look! The text is underneath',
           template: $('.template').html()
         });
       });
