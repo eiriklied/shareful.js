@@ -1,8 +1,8 @@
 .sf-overlay {
   position: absolute;
   top:0; left:0; right:0; bottom:0;
-  opacity: 0.9;
-  background-color: #333;
+  opacity: 0.8;
+  background-color: #000;
   z-index: 2000;
 }
 .sf-box {
@@ -31,7 +31,6 @@
   margin: 5px 0 5px;
   font-size: 1.5em;
   font-weight: bold;
-  color: #333;
 }
 .sf-text textarea, 
 .sf-text input[type=text]{
@@ -41,7 +40,6 @@
   outline: none;
   padding: 8px 10px;
   border-radius: 3px;
-  color: #333;
 }
 
 .sf-close {
