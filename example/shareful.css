@@ -1,0 +1,44 @@
+
+.sf-overlay {
+  position: absolute;
+  top:0; left:0; right:0; bottom:0;
+  opacity: 0.9;
+  background-color: #333;
+  z-index: 2000;
+}
+
+.sf-box {
+  display: none;
+}
+.sf-box.sf-focused {
+  display: block;
+  position: absolute;
+  background-color: #fff;
+  z-index: 2001;
+  width: 400px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+
+  padding: 10px 20px;
+  border-radius: 5px;
+}
+
+.sf-row {
+  overflow: hidden;
+}
+.sf-label {
+
+}
+.sf-text textarea, 
+.sf-text input[type=text]{
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.sf-close {
+  float:right;
+  cursor: pointer;
+  color: #666;
+  font-size: 20px;
+}

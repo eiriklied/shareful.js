@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Shareful.js</title>
+    <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.3.0/pure-min.css">
+    <link rel="stylesheet" href="shareful.css" />
+    <style type="text/css">
+    body {
+      background-color: #efefef;
+    }
+    .l-box {
+        padding: 1em;
+    }
+    </style>
+  </head>
+  <body>
+
+    <div class="pure-g">
+      <div class="pure-u-1-2">
+        <div class="l-box">
+          <button id="basic" class="pure-button pure-button-primary">Share me something basic</button>
+        </div>
+      </div>
+    </div>
+    <div class="pure-g">
+      <div class="pure-u-1-2">
+        <div class="l-box">
+          <button id="with-label" class="pure-button pure-button-primary">Share me something with more text</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="template">
+      <div class="sf-box">
+        <div class="sf-header sf-row"><span class="sf-close">&times;</span></div>
+        <div class="sf-body sf-row">
+          <div class="sf-label">
+            <label for="sf-text" id="sf-label"></label>
+          </div>
+          <div class="sf-text">
+            <textarea id="sf-text" type="text"></textarea>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script src="../shareful.js"></script>
+    <script type="text/javascript">
+
+      $('#basic').click(function() {
+        Shareful.share('Shared ' + new Date());
+      });
+
+      $('#with-label').click(function() {
+        Shareful.share({
+          label: 'Copy this!',
+          text: 'Shared ' + new Date(),
+          template: $('.template').html()
+        });
+      });
+    </script>
+  </body>
+</html>
