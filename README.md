@@ -23,4 +23,4 @@ Shareful will create markup for two elements in the page. A `<div class="sf-over
 
 ## Dependencies
 
-jQuery is used
+Shareful assumes jQuery is present and uses it, however it is not a jQuery plugin.
