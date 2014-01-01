@@ -36,11 +36,11 @@
       <div class="sf-box">
         <div class="sf-header sf-row"><span class="sf-close">&times;</span></div>
         <div class="sf-body sf-row">
-          <div class="sf-label">
-            <label for="sf-text" id="sf-label"></label>
-          </div>
           <div class="sf-text">
             <textarea id="sf-text"></textarea>
+          </div>
+          <div class="sf-label">
+            <label for="sf-text" id="sf-label"></label>
           </div>
         </div>
       </div>
@@ -65,6 +65,7 @@
       $('#with-template').click(function() {
         Shareful.share({
           text: 'Shared ' + new Date(),
+          label: 'Look! Label underneath a textarea',
           template: $('.template').html()
         });
       });
