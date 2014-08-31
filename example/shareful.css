@@ -33,17 +33,16 @@
   font-size: 1.5em;
   font-weight: bold;
 }
-.sf-text textarea, 
-.sf-text input[type=text]{
+
+.sf-body {
   width: 100%;
   box-sizing: border-box;
   border: 1px solid #ccc;
   outline: none;
   padding: 8px 10px;
   border-radius: 3px;
-}
-.sf-text input[type=text]{
-  height: initial;
+  overflow: scroll;
+  max-height: 400px;
 }
 .sf-close {
   float:right;

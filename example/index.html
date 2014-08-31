@@ -12,6 +12,12 @@
     .l-box {
         padding: 1em;
     }
+    .bold {
+      font-weight: bold;
+    }
+    .hidden {
+      display: none;
+    }
     </style>
   </head>
   <body>
@@ -23,28 +29,44 @@
     </div>
     <div class="pure-g">
       <div class="l-box">
-        <button id="with-heading" class="pure-button pure-button-primary">Share me something with more text</button>
+        <button id="with-heading" class="pure-button pure-button-primary">Share me something with a heading</button>
       </div>
     </div>
 
     <div class="pure-g">
       <div class="l-box">
-        <button id="with-template" class="pure-button pure-button-primary">Share me something with a template</button>
+        <button id="with-html" class="pure-button pure-button-primary">Share me some formatted html</button>
       </div>
     </div>
 
-    <div class="template">
-      <div class="sf-box">
-        <div class="sf-header sf-row"><span class="sf-close">&times;</span></div>
-        <div class="sf-body sf-row">
-          <div class="sf-text">
-            <textarea id="sf-text"></textarea>
-          </div>
-          <div class="sf-heading-text"></div>
-        </div>
-      </div>
+    <div class="html-to-share hidden">
+      <table>
+        <thead>
+          <tr>
+            <th>Column 1</th>
+            <th>Column 2</th>
+            <th>Column 3</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Val 1</td>
+            <td>Val 2</td>
+            <td>Val 3</td>
+          </tr>
+          <tr>
+            <td>Val A</td>
+            <td>Val B</td>
+            <td>Val C</td>
+          </tr>
+          <tr>
+            <td>Val !</td>
+            <td>Val #</td>
+            <td>Val $</td>
+          </tr>
+        </tbody>
+      </table>
     </div>
-
 
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
     <script src="../shareful.js"></script>
@@ -61,11 +83,11 @@
         });
       });
 
-      $('#with-template').click(function() {
+
+      $('#with-html').click(function() {
         Shareful.share({
-          text: 'Shared ' + new Date(),
-          heading: 'Look! The text is underneath',
-          template: $('.template').html()
+          heading: 'Here is a table for you!',
+          html: $('.html-to-share').html()
         });
       });
     </script>

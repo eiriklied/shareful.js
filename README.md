@@ -9,9 +9,15 @@ All you care about is that you need to give the user a super simple popup with s
 Shareful.share('http://my.url/for-sharing');
 
 // with a heading
-Shareful.share({ 
+Shareful.share({
   heading: 'Here you go!',
   text: 'The text to share'
+});
+
+// share formatted HTML instead of plain text
+Shareful.share({
+  heading: 'Here you go!',
+  html: '<p>Some fancy content with styling</p>'
 });
 
 ```
